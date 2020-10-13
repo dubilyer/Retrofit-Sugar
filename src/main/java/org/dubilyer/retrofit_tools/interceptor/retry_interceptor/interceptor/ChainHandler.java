@@ -7,7 +7,7 @@ import java.util.concurrent.Callable;
 
 import static okhttp3.Interceptor.Chain;
 
-public class ChainHandler implements Callable<Response> {
+class ChainHandler implements Callable<Response> {
     private final Chain chain;
 
     public ChainHandler(Chain chain) {
