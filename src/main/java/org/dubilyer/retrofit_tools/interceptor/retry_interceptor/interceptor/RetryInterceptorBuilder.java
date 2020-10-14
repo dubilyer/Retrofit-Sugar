@@ -5,11 +5,10 @@ import com.github.rholder.retry.RetryerBuilder;
 import com.github.rholder.retry.StopStrategies;
 import com.github.rholder.retry.WaitStrategies;
 import okhttp3.Response;
-import org.dubilyer.retrofit_tools.interceptor.retry_interceptor.listener.RetryRequestListener;
 
 import java.util.concurrent.TimeUnit;
 
-public class RetryInterceptorBuilder {
+public final class RetryInterceptorBuilder {
     private final RetryListener retryListener = new RetryRequestListener();
 
     RetryerBuilder<Response> retryerBuilder = RetryerBuilder

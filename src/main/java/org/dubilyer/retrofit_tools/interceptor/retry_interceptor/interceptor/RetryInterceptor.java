@@ -8,7 +8,7 @@ import org.dubilyer.retrofit_tools.interceptor.retry_interceptor.exception.Retry
 
 import java.util.concurrent.ExecutionException;
 
-public class RetryInterceptor implements Interceptor {
+public final class RetryInterceptor implements Interceptor {
     final Retryer<Response> retryer;
 
     RetryInterceptor(Retryer<Response> retryer) {
@@ -27,4 +27,5 @@ public class RetryInterceptor implements Interceptor {
             throw new RetryInterceptorException(e);
         }
     }
+
 }

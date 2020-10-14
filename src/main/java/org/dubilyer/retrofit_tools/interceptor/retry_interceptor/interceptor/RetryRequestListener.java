@@ -1,15 +1,14 @@
-package org.dubilyer.retrofit_tools.interceptor.retry_interceptor.listener;
+package org.dubilyer.retrofit_tools.interceptor.retry_interceptor.interceptor;
 
 import com.github.rholder.retry.Attempt;
 import com.github.rholder.retry.RetryListener;
 import okhttp3.Response;
 
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static java.util.logging.Level.*;
+import static java.util.logging.Level.WARNING;
 
-public class RetryRequestListener implements RetryListener {
+class RetryRequestListener implements RetryListener {
     Logger logger = Logger.getLogger(RetryRequestListener.class.getSimpleName());
 
     @Override
